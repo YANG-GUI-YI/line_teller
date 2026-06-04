@@ -1,0 +1,4 @@
+fastapi
+line-bot-sdk
+openai
+uvicorn

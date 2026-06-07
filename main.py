@@ -1,12 +1,12 @@
 import os
-
+from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from openai import OpenAI
 
-
+load_dotenv()
 app = FastAPI()
 conversation_history = {}
 MAX_HISTORY_MESSAGES = 20
@@ -14,6 +14,7 @@ SYSTEM_PROMPT = "你是一位溫柔且有耐心的高齡陪伴助手，請根據
 
 line_bot_api = LineBotApi(os.environ["LINE_CHANNEL_ACCESS_TOKEN"])
 handler = WebhookHandler(os.environ["LINE_CHANNEL_SECRET"])
+print("OPENROUTER_API_KEY =", os.getenv("OPENROUTER_API_KEY"))
 client = OpenAI(
     api_key=os.environ["OPENROUTER_API_KEY"],
     base_url="https://openrouter.ai/api/v1",
@@ -46,7 +47,7 @@ async def callback(request: Request):
 
     body = await request.body()
     body = body.decode("utf-8")
-
+    print("CALLBACK HIT")
     try:
         handler.handle(body, signature)
     except InvalidSignatureError:
@@ -77,8 +78,12 @@ def handle_message(event):
         })
         trim_history(user_id)
     except Exception as e:
+        print("===== ERROR =====")
+        print(type(e))
         print(e)
-        reply_text = "目前系統忙碌中，請稍後再試。"
+        print("=================")
+
+        reply_text = f"錯誤：{str(e)}"
 
     line_bot_api.reply_message(
         event.reply_token,

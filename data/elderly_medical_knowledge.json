@@ -1,0 +1,79 @@
+[
+  {
+    "title": "長者跌倒預防",
+    "source": "CDC Older Adult Fall Prevention",
+    "url": "https://www.cdc.gov/falls/about/index.html",
+    "keywords": [
+      "跌倒",
+      "摔倒",
+      "走路不穩",
+      "平衡",
+      "骨折",
+      "頭部撞到",
+      "長者安全"
+    ],
+    "content": "65歲以上長者跌倒很常見，但很多跌倒可以預防。可從居家安全、規律活動、平衡與肌力訓練、檢查視力、檢視藥物副作用與避免環境障礙物開始。若跌倒後有頭部外傷、意識混亂、無法站立、疑似骨折、嚴重疼痛或服用抗凝血藥，應儘速就醫或聯絡當地緊急救護。"
+  },
+  {
+    "title": "成人急症就醫警訊",
+    "source": "MedlinePlus When to use the emergency room - adult",
+    "url": "https://medlineplus.gov/ency/patientinstructions/000593.htm",
+    "keywords": [
+      "急診",
+      "胸痛",
+      "呼吸困難",
+      "昏倒",
+      "中風",
+      "抽搐",
+      "嚴重頭痛",
+      "意識混亂",
+      "大量出血"
+    ],
+    "content": "若出現可能危及生命或造成永久失能的狀況，應立即叫救護車或去急診。警訊包含嚴重胸痛或胸悶、嚴重呼吸困難、昏倒、突發單側無力或臉歪、突然無法說話/看見/走路、頭部外傷後昏厥或混亂、抽搐超過1分鐘或未快速清醒、大量出血、疑似骨折且無法活動、嚴重過敏合併呼吸困難。"
+  },
+  {
+    "title": "長者用藥與跌倒風險",
+    "source": "CDC STEADI medicines risk resource",
+    "url": "https://www.cdc.gov/falls/about/index.html",
+    "keywords": [
+      "藥物",
+      "用藥",
+      "安眠藥",
+      "鎮靜",
+      "頭暈",
+      "低血壓",
+      "多重用藥",
+      "副作用"
+    ],
+    "content": "部分藥物可能增加嗜睡、頭暈、反應變慢、姿勢性低血壓或混亂，進而提高跌倒風險。常見需要與醫師或藥師討論的類型包含安眠鎮靜藥、抗焦慮藥、部分止痛藥、部分降血壓藥、抗組織胺與多重用藥。不要自行停藥，應帶著藥袋或藥單請專業人員檢視。"
+  },
+  {
+    "title": "長者脫水與照護提醒",
+    "source": "MedlinePlus emergency care guidance",
+    "url": "https://medlineplus.gov/ency/patientinstructions/000593.htm",
+    "keywords": [
+      "脫水",
+      "喝水",
+      "腹瀉",
+      "嘔吐",
+      "發燒",
+      "尿少",
+      "虛弱"
+    ],
+    "content": "長者若持續嘔吐或腹瀉、發燒、尿量明顯減少、口乾、頭暈、極度虛弱或意識變差，可能需要盡快醫療評估。若症狀嚴重、無法補充水分、合併混亂或昏倒，應考慮急診或叫救護車。"
+  },
+  {
+    "title": "回答醫療問題的安全界線",
+    "source": "Medical safety guardrail",
+    "url": "local://medical-safety",
+    "keywords": [
+      "診斷",
+      "治療",
+      "藥量",
+      "處方",
+      "醫療建議",
+      "老人醫療"
+    ],
+    "content": "對長者醫療問題應提供衛教、風險提醒與就醫方向，不應做確定診斷、開藥、調整劑量或取代醫師。若使用者描述急症警訊，回答應優先建議立即聯絡當地緊急救護；在台灣可撥打119。"
+  }
+]

@@ -5,11 +5,12 @@ from datetime import datetime, time, timedelta, timezone
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
+
 TAIWAN_TZ = timezone(timedelta(hours=8), name="UTC+8")
 OPENWEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
 DEFAULT_WEATHER_LAT = "25.0330"
 DEFAULT_WEATHER_LON = "121.5654"
-DEFAULT_WEATHER_LOCATION_NAME = "台北"
+DEFAULT_WEATHER_LOCATION_NAME = "Taipei"
 
 
 def get_push_targets():
@@ -47,7 +48,7 @@ def format_weather_message(weather_data):
     wind = weather_data.get("wind", {})
     rain = weather_data.get("rain", {})
 
-    description = weather.get("description", "天氣資訊暫缺")
+    description = weather.get("description", "weather data unavailable")
     temperature = main.get("temp")
     feels_like = main.get("feels_like")
     humidity = main.get("humidity")
@@ -55,24 +56,24 @@ def format_weather_message(weather_data):
     rain_1h = rain.get("1h", 0)
 
     lines = [
-        f"早安，這是今天 08:00 的 {location_name} 天氣提醒：",
-        f"天氣：{description}",
+        f"Good morning. Here is the 08:00 weather update for {location_name}:",
+        f"Weather: {description}",
     ]
 
     if temperature is not None:
-        lines.append(f"氣溫：{temperature:.1f}°C")
+        lines.append(f"Temperature: {temperature:.1f} C")
     if feels_like is not None:
-        lines.append(f"體感：{feels_like:.1f}°C")
+        lines.append(f"Feels like: {feels_like:.1f} C")
     if humidity is not None:
-        lines.append(f"濕度：{humidity}%")
+        lines.append(f"Humidity: {humidity}%")
     if wind_speed is not None:
-        lines.append(f"風速：{wind_speed:.1f} m/s")
+        lines.append(f"Wind speed: {wind_speed:.1f} m/s")
     if rain_1h:
-        lines.append(f"近 1 小時降雨量：{rain_1h} mm")
+        lines.append(f"Rain in the last hour: {rain_1h} mm")
 
     lines.extend([
         "",
-        "長者提醒：外出請留意地面濕滑與溫差，記得補充水分。若有胸悶、呼吸困難或明顯不適，請儘快聯絡家人或就醫。",
+        "Older-adult reminder: watch for slippery ground and temperature changes. Drink water regularly. If chest tightness, trouble breathing, or obvious discomfort occurs, contact family or seek medical care.",
     ])
     return "\n".join(lines)
 

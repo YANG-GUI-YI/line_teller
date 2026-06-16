@@ -1,0 +1,22 @@
+name: Wake app before weather push
+
+on:
+  schedule:
+    # Taiwan time is UTC+8. These run at 07:50, 07:55, and 07:59 Taiwan time.
+    - cron: "50,55,59 23 * * *"
+  workflow_dispatch:
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wake deployed app
+        env:
+          WAKE_URL: ${{ secrets.WAKE_URL }}
+        run: |
+          if [ -z "$WAKE_URL" ]; then
+            echo "Missing repository secret: WAKE_URL"
+            exit 1
+          fi
+
+          curl --fail --show-error --silent --max-time 30 "$WAKE_URL/wake"

@@ -1,79 +1,108 @@
 [
   {
-    "title": "長者跌倒預防",
+    "id": "falls-prevention",
+    "title": "Older adult fall prevention",
     "source": "CDC Older Adult Fall Prevention",
     "url": "https://www.cdc.gov/falls/about/index.html",
     "keywords": [
-      "跌倒",
-      "摔倒",
-      "走路不穩",
-      "平衡",
-      "骨折",
-      "頭部撞到",
-      "長者安全"
+      "\u8dcc\u5012",
+      "\u6454\u5012",
+      "\u8d70\u8def\u4e0d\u7a69",
+      "\u982d\u6688",
+      "\u9aa8\u6298",
+      "\u649e\u5230\u982d",
+      "\u9577\u8005\u5b89\u5168",
+      "fall",
+      "falls",
+      "fracture",
+      "balance"
     ],
-    "content": "65歲以上長者跌倒很常見，但很多跌倒可以預防。可從居家安全、規律活動、平衡與肌力訓練、檢查視力、檢視藥物副作用與避免環境障礙物開始。若跌倒後有頭部外傷、意識混亂、無法站立、疑似骨折、嚴重疼痛或服用抗凝血藥，應儘速就醫或聯絡當地緊急救護。"
+    "content": "Falls are common among adults age 65 and older, but many falls can be prevented. Helpful steps include removing home hazards, improving lighting, checking vision, reviewing medicines with a clinician or pharmacist, and doing strength and balance activities when appropriate. After a fall, urgent medical care is important if there is head injury, confusion, inability to stand, suspected fracture, severe pain, heavy bleeding, or anticoagulant use."
   },
   {
-    "title": "成人急症就醫警訊",
+    "id": "emergency-warning-signs",
+    "title": "Emergency warning signs for adults",
     "source": "MedlinePlus When to use the emergency room - adult",
     "url": "https://medlineplus.gov/ency/patientinstructions/000593.htm",
     "keywords": [
-      "急診",
-      "胸痛",
-      "呼吸困難",
-      "昏倒",
-      "中風",
-      "抽搐",
-      "嚴重頭痛",
-      "意識混亂",
-      "大量出血"
+      "\u6025\u8a3a",
+      "\u80f8\u75db",
+      "\u80f8\u60b6",
+      "\u547c\u5438\u56f0\u96e3",
+      "\u660f\u5012",
+      "\u4e2d\u98a8",
+      "\u62bd\u6410",
+      "\u610f\u8b58\u6df7\u4e82",
+      "\u5927\u91cf\u51fa\u8840",
+      "emergency",
+      "chest pain",
+      "shortness of breath",
+      "stroke",
+      "confusion"
     ],
-    "content": "若出現可能危及生命或造成永久失能的狀況，應立即叫救護車或去急診。警訊包含嚴重胸痛或胸悶、嚴重呼吸困難、昏倒、突發單側無力或臉歪、突然無法說話/看見/走路、頭部外傷後昏厥或混亂、抽搐超過1分鐘或未快速清醒、大量出血、疑似骨折且無法活動、嚴重過敏合併呼吸困難。"
+    "content": "Use emergency care for symptoms that may threaten life or cause permanent harm. Warning signs include severe chest pain or pressure, severe trouble breathing, fainting, sudden one-sided weakness or facial droop, sudden trouble speaking, seeing, walking, or understanding, head injury followed by fainting or confusion, seizure that lasts longer than about one minute or is followed by slow recovery, heavy bleeding, severe allergic reaction with breathing problems, and suspected fracture with inability to move."
   },
   {
-    "title": "長者用藥與跌倒風險",
+    "id": "medicine-fall-risk",
+    "title": "Medicines and fall risk in older adults",
     "source": "CDC STEADI medicines risk resource",
     "url": "https://www.cdc.gov/falls/about/index.html",
     "keywords": [
-      "藥物",
-      "用藥",
-      "安眠藥",
-      "鎮靜",
-      "頭暈",
-      "低血壓",
-      "多重用藥",
-      "副作用"
+      "\u85e5\u7269",
+      "\u7528\u85e5",
+      "\u5b89\u7720\u85e5",
+      "\u93ae\u975c",
+      "\u982d\u6688",
+      "\u4f4e\u8840\u58d3",
+      "\u591a\u91cd\u7528\u85e5",
+      "\u526f\u4f5c\u7528",
+      "medicine",
+      "medication",
+      "sedative",
+      "dizziness",
+      "low blood pressure"
     ],
-    "content": "部分藥物可能增加嗜睡、頭暈、反應變慢、姿勢性低血壓或混亂，進而提高跌倒風險。常見需要與醫師或藥師討論的類型包含安眠鎮靜藥、抗焦慮藥、部分止痛藥、部分降血壓藥、抗組織胺與多重用藥。不要自行停藥，應帶著藥袋或藥單請專業人員檢視。"
+    "content": "Some medicines can increase sleepiness, dizziness, slower reaction time, orthostatic hypotension, or confusion, which may raise fall risk. Medicines to discuss with a clinician or pharmacist include sleep medicines, sedatives, anti-anxiety medicines, some pain medicines, some blood pressure medicines, antihistamines, and complex medication lists. Do not stop prescribed medicines without professional guidance."
   },
   {
-    "title": "長者脫水與照護提醒",
+    "id": "dehydration",
+    "title": "Dehydration concerns in older adults",
     "source": "MedlinePlus emergency care guidance",
     "url": "https://medlineplus.gov/ency/patientinstructions/000593.htm",
     "keywords": [
-      "脫水",
-      "喝水",
-      "腹瀉",
-      "嘔吐",
-      "發燒",
-      "尿少",
-      "虛弱"
+      "\u812b\u6c34",
+      "\u559d\u6c34",
+      "\u8179\u7009",
+      "\u5614\u5410",
+      "\u767c\u71d2",
+      "\u5c3f\u5c11",
+      "\u865b\u5f31",
+      "dehydration",
+      "vomiting",
+      "diarrhea",
+      "fever",
+      "weakness"
     ],
-    "content": "長者若持續嘔吐或腹瀉、發燒、尿量明顯減少、口乾、頭暈、極度虛弱或意識變差，可能需要盡快醫療評估。若症狀嚴重、無法補充水分、合併混亂或昏倒，應考慮急診或叫救護車。"
+    "content": "Older adults may need prompt medical evaluation when vomiting or diarrhea continues, fever is present, urine is much lower than usual, the mouth is very dry, dizziness occurs, weakness is severe, or mental status worsens. If symptoms are severe, the person cannot keep fluids down, or there is confusion or fainting, urgent care or emergency care may be needed."
   },
   {
-    "title": "回答醫療問題的安全界線",
+    "id": "medical-safety-boundary",
+    "title": "Medical safety boundary",
     "source": "Medical safety guardrail",
     "url": "local://medical-safety",
     "keywords": [
-      "診斷",
-      "治療",
-      "藥量",
-      "處方",
-      "醫療建議",
-      "老人醫療"
+      "\u8a3a\u65b7",
+      "\u6cbb\u7642",
+      "\u85e5\u91cf",
+      "\u8655\u65b9",
+      "\u91ab\u7642\u5efa\u8b70",
+      "\u8001\u4eba\u91ab\u7642",
+      "diagnosis",
+      "treatment",
+      "dose",
+      "prescription",
+      "medical advice"
     ],
-    "content": "對長者醫療問題應提供衛教、風險提醒與就醫方向，不應做確定診斷、開藥、調整劑量或取代醫師。若使用者描述急症警訊，回答應優先建議立即聯絡當地緊急救護；在台灣可撥打119。"
+    "content": "For elderly medical questions, provide health education, risk reminders, and guidance about when to contact a clinician or emergency services. Do not provide a definitive diagnosis, prescribe medicine, change medication doses, or replace a clinician. If the user describes emergency warning signs, the response should prioritize contacting local emergency services immediately. In Taiwan, call 119."
   }
 ]

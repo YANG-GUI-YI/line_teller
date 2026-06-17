@@ -12,6 +12,8 @@ VECTOR_DB_PATH = DATA_DIR / "elderly_medical_vector_db.json"
 EMBEDDING_DIMENSIONS = 384
 CHUNK_MAX_CHARS = 420
 CHUNK_OVERLAP_CHARS = 80
+SUPPORTED_DOCUMENT_EXTENSIONS = {".md", ".txt"}
+SOURCE_SCHEMA_VERSION = 2
 
 
 def tokenize(text):
@@ -68,49 +70,58 @@ def chunk_text(text, max_chars=CHUNK_MAX_CHARS, overlap_chars=CHUNK_OVERLAP_CHAR
     return chunks
 
 
-def get_markdown_paths():
+def get_document_paths():
     if not MEDICAL_DOCS_DIR.exists():
         return []
-    return sorted(MEDICAL_DOCS_DIR.rglob("*.md"))
+    return sorted(
+        path
+        for path in MEDICAL_DOCS_DIR.rglob("*")
+        if path.is_file() and path.suffix.lower() in SUPPORTED_DOCUMENT_EXTENSIONS
+    )
 
 
 def get_source_paths():
-    markdown_paths = get_markdown_paths()
-    if markdown_paths:
-        return markdown_paths
+    document_paths = get_document_paths()
+    if document_paths:
+        return document_paths
     return [KNOWLEDGE_PATH]
 
 
 def get_source_fingerprint():
-    return [
+    return {
+        "schema_version": SOURCE_SCHEMA_VERSION,
+        "sources": [
         {
             "path": path.relative_to(Path(__file__).parent).as_posix(),
             "mtime": path.stat().st_mtime,
         }
         for path in get_source_paths()
         if path.exists()
-    ]
+        ],
+    }
 
 
-def markdown_title(path, content):
+def document_title(path, content):
     for line in content.splitlines():
         stripped = line.strip()
-        if stripped.startswith("#"):
+        if path.suffix.lower() == ".md" and stripped.startswith("#"):
             return stripped.lstrip("#").strip() or path.stem
+        if path.suffix.lower() == ".txt" and stripped:
+            return path.stem
     return path.stem
 
 
-def load_markdown_documents():
+def load_medical_documents():
     documents = []
-    for path in get_markdown_paths():
+    for path in get_document_paths():
         content = path.read_text(encoding="utf-8").strip()
         if not content:
             continue
 
         relative_path = path.relative_to(Path(__file__).parent).as_posix()
         documents.append({
-            "id": f"md:{relative_path}",
-            "title": markdown_title(path, content),
+            "id": f"{path.suffix.lower().lstrip('.')}:{relative_path}",
+            "title": document_title(path, content),
             "source": relative_path,
             "url": f"file://{relative_path}",
             "keywords": [],
@@ -121,9 +132,9 @@ def load_markdown_documents():
 
 
 def load_knowledge_base():
-    markdown_documents = load_markdown_documents()
-    if markdown_documents:
-        return markdown_documents
+    medical_documents = load_medical_documents()
+    if medical_documents:
+        return medical_documents
 
     with KNOWLEDGE_PATH.open("r", encoding="utf-8") as file:
         return json.load(file)
